@@ -1,0 +1,82 @@
+@font-face {
+  font-family: "Imogen Agnes";
+  src: url("../fonts/Imogen-Agnes.eot");
+  src: url("../fonts/Imogen-Agnes.eot?#iefix") format("embedded-opentype"), url("../fonts/Imogen-Agnes.woff") format("woff"), url("../fonts/Imogen-Agnes.woff2") format("woff2"), url("../fonts/Imogen-Agnes.ttf") format("truetype"), url("../fonts/Imogen-Agnes.svg#pt-sans") format("svg"); }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", sans-serif; }
+
+.btn {
+  font-family: "Roboto", sans-serif;
+  color: #228B22;
+  border: 3px solid;
+  padding: 20px 40px;
+  font-size: 18px;
+  background-color: transparent;
+  outline: none;
+  box-shadow: none; }
+  .btn:hover {
+    background-color: #228B22;
+    color: #fff;
+    border: 3px solid #228B22; }
+  .btn.hide {
+    display: none; }
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1024px;
+  text-align: center; }
+  .container .title {
+    text-align: center;
+    color: #228B22;
+    font-size: 56px; }
+  .container .text {
+    font-family: "Imogen Agnes";
+    font-size: 32px; }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0; }
+  .overlay--start {
+    transition: opacity 0.4s ease 0s;
+    opacity: 1;
+    width: 100%;
+    height: 100%; }
+
+.page_title {
+  text-align: center; }
+
+.page_content {
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: center; }
+
+.page_text {
+  display: none; }
+  .page_text--show {
+    display: block; }
+
+.fancy {
+  font-family: "Imogen Agnes";
+  font-weight: 100; }
+
+.big {
+  font-size: 48px; }
+  .big--fancy {
+    font-size: 86px; }
+
+.white {
+  color: white; }
+  .white span {
+    color: white; }
+
+.green {
+  color: #228B22; }
+  .green span {
+    color: #228B22; }

@@ -1,0 +1,18 @@
+.btn{
+  font-family: $normal-font;
+  color: $green;
+  border: 3px solid;
+  padding: 20px 40px;
+  font-size: 18px;
+  background-color: transparent;
+  outline: none;
+  box-shadow: none;
+  &:hover{
+    background-color: $green;
+    color: #fff;
+    border: 3px solid $green;
+  }
+  &.hide{
+    display: none;
+  }
+}

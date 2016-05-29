@@ -1,0 +1,19 @@
+
+$normal-font: 'Roboto', sans-serif;
+
+@font-face {
+  font-family: "Imogen Agnes";
+  src:url('../fonts/Imogen-Agnes.eot'); // IE9 Compat Modes
+  src:url('../fonts/Imogen-Agnes.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+  url('../fonts/Imogen-Agnes.woff') format('woff'), // Modern Browsers
+  url('../fonts/Imogen-Agnes.woff2') format('woff2'),
+  url('../fonts/Imogen-Agnes.ttf') format('truetype'), // Safari, Android, iOS
+  url('../fonts/Imogen-Agnes.svg#pt-sans') format('svg');  // Legacy iOS
+}
+
+$fancy-font: "Imogen Agnes";
+
+
+h1,h2,h3,h4,h5,h6{
+  font-family: $normal-font;
+}

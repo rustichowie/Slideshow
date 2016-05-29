@@ -1,0 +1,41 @@
+.page{
+
+  &_title{
+    text-align: center;
+  }
+  &_content{
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: center;
+  }
+  &_text{
+    display: none;
+
+    &--show{
+      display: block;
+    }
+  }
+}
+
+.fancy{
+  font-family: $fancy-font;
+  font-weight: 100;
+}
+.big{
+  font-size: 48px;
+  &--fancy{
+    font-size: 86px;
+  }
+}
+.white{
+  color: white;
+  span{
+    color: white;
+  }
+}
+.green{
+  color: $green;
+  span {
+    color: $green;
+  }
+}
