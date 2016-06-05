@@ -1,5 +1,5 @@
 .page{
-
+  margin-bottom: 30px;
   &_title{
     text-align: center;
   }
@@ -15,16 +15,32 @@
       display: block;
     }
   }
+  &_images{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 
 .fancy{
   font-family: $fancy-font;
   font-weight: 100;
 }
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 .big{
   font-size: 48px;
   &--fancy{
     font-size: 86px;
+  }
+}
+.medium{
+  font-size: 26px;
+  &--fancy{
+    font-size: 56px;
   }
 }
 .white{

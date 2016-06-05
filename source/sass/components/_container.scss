@@ -13,5 +13,12 @@
   .text{
     font-family: $fancy-font;
     font-size: 32px;
+    p, span {
+      font-size: 54px;
+      font-family: $fancy-font;
+    }
   }
+}
+img{
+  max-width: 100%;
 }

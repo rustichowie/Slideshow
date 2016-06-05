@@ -34,6 +34,12 @@ h1, h2, h3, h4, h5, h6 {
   .container .text {
     font-family: "Imogen Agnes";
     font-size: 32px; }
+    .container .text p, .container .text span {
+      font-size: 54px;
+      font-family: "Imogen Agnes"; }
+
+img {
+  max-width: 100%; }
 
 .overlay {
   position: fixed;
@@ -49,27 +55,41 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 100%; }
 
-.page_title {
-  text-align: center; }
-
-.page_content {
-  margin: 0 auto;
-  max-width: 800px;
-  text-align: center; }
-
-.page_text {
-  display: none; }
-  .page_text--show {
-    display: block; }
+.page {
+  margin-bottom: 30px; }
+  .page_title {
+    text-align: center; }
+  .page_content {
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: center; }
+  .page_text {
+    display: none; }
+    .page_text--show {
+      display: block; }
+  .page_images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; }
 
 .fancy {
   font-family: "Imogen Agnes";
   font-weight: 100; }
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
 .big {
   font-size: 48px; }
   .big--fancy {
     font-size: 86px; }
+
+.medium {
+  font-size: 26px; }
+  .medium--fancy {
+    font-size: 56px; }
 
 .white {
   color: white; }
