@@ -9,16 +9,18 @@ h1, h2, h3, h4, h5, h6 {
 .btn {
   font-family: "Roboto", sans-serif;
   color: #228B22;
-  border: 3px solid;
-  padding: 20px 40px;
-  font-size: 18px;
+  margin-top: 20%;
+  border: 6px solid;
+  padding: 80px 160px;
+  font-weight: bold;
+  font-size: 52px;
   background-color: transparent;
   outline: none;
   box-shadow: none; }
   .btn:hover {
     background-color: #228B22;
     color: #fff;
-    border: 3px solid #228B22; }
+    border: 6px solid #228B22; }
   .btn.hide {
     display: none; }
 
@@ -56,21 +58,40 @@ img {
     height: 100%; }
 
 .page {
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  margin: 30px auto;
+  max-width: 1000px; }
   .page_title {
     text-align: center; }
   .page_content {
     margin: 0 auto;
-    max-width: 800px;
+    width: 100%;
     text-align: center; }
   .page_text {
     display: none; }
     .page_text--show {
       display: block; }
   .page_images {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; }
+    width: 100%; }
+    .page_images .img-container {
+      margin-right: 30px;
+      margin-top: 10px;
+      float: left; }
+      .page_images .img-container.single {
+        width: 100%;
+        float: none;
+        margin: 0 auto; }
+    .page_images.multiple-rows .img-container {
+      max-height: 220px; }
+    .page_images.multiple-rows--large .img-container {
+      max-height: 250px; }
+    .page_images.normal {
+      display: block; }
+
+.special {
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 170px); }
 
 .fancy {
   font-family: "Imogen Agnes";
@@ -91,6 +112,11 @@ img {
   .medium--fancy {
     font-size: 56px; }
 
+.small {
+  font-size: 18px; }
+  .small--fancy {
+    font-size: 42px; }
+
 .white {
   color: white; }
   .white span {
@@ -100,3 +126,7 @@ img {
   color: #228B22; }
   .green span {
     color: #228B22; }
+
+.rotate90Right {
+  transform: rotate(90deg) !important;
+  margin-top: 50px; }

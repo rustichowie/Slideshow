@@ -1,11 +1,13 @@
 .page{
   margin-bottom: 30px;
+  margin: 30px auto;
+      max-width: 1000px;
   &_title{
     text-align: center;
   }
   &_content{
     margin: 0 auto;
-    max-width: 800px;
+    width: 100%;
     text-align: center;
   }
   &_text{
@@ -16,12 +18,43 @@
     }
   }
   &_images{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    width: 100%;
+    //display: flex;
+    //justify-content: center;
+    //align-items: center;
+    //flex-wrap: wrap;
+    .img-container{
+      margin-right: 30px;
+      margin-top: 10px;
+      float: left;
+      &.single{
+        width: 100%;
+        float: none;
+        margin: 0 auto;
+      }
+    }
+    &.multiple-rows{
+      .img-container{
+        max-height: 220px;
+
+      }
+      &--large{
+        .img-container{
+          max-height: 250px;
+
+        }
+      }
+    }
+    &.normal{
+      display: block;
+    }
   }
 }
-
+.special{
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 170px);
+}
 .fancy{
   font-family: $fancy-font;
   font-weight: 100;
@@ -43,6 +76,12 @@
     font-size: 56px;
   }
 }
+.small{
+  font-size: 18px;
+  &--fancy{
+    font-size: 42px;
+  }
+}
 .white{
   color: white;
   span{
@@ -54,4 +93,9 @@
   span {
     color: $green;
   }
+}
+
+.rotate90Right{
+  transform: rotate(90deg) !important;
+  margin-top: 50px;
 }

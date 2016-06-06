@@ -13,7 +13,17 @@ var Slideshow = {
     this.startBtn.classList.toggle('hide');
     this.data = this.data || Data;
     var slideshow = this;
-    this.runPage(0);
+    if(location.hash){
+      var pageId = location.hash.slice(1)
+      if(Number(pageId)){
+        this.runPage(pageId);
+      } else {
+        this.runPage(0);
+      }
+    } else {
+      this.runPage(0);
+    }
+
   },
   runPage: function(pageId){
     var slideshow = this;
@@ -38,6 +48,12 @@ var Slideshow = {
         var content = pageData.content;
         var imageContainer = document.createElement("DIV");
         imageContainer.classList.add("page_images");
+        if(pageData.options.imageContainerClass){
+          for (var i = 0; i < pageData.options.imageContainerClass.split(",").length; i++) {
+            var className = pageData.options.imageContainerClass.split(",")[i];
+            imageContainer.classList.add(className);
+          }
+        }
         contentNode.appendChild(imageContainer);
 
         for (var i = 0; i < pageData.images.length; i++) {
@@ -58,10 +74,18 @@ var Slideshow = {
   },
   animateImage: function(imageData, imageContainer){
     var img = document.createElement("IMG");
+    var innerContainer = document.createElement("DIV");
+    innerContainer.classList.add("img-container");
+    if(imageData.containerClasses){
+      for (var i = 0; i < imageData.containerClasses.split(",").length; i++) {
+        var className = imageData.containerClasses.split(",")[i];
+        innerContainer.classList.add(className);
+      }
+    }
     img.src = imageData.url;
     setTimeout(function(){
       img.classList.add("animated");
-      img.style.height = imageData.height + "px";
+      innerContainer.style.width = imageData.width + "px";
       if(imageData.classes){
         for (var i = 0; i < imageData.classes.split(",").length; i++) {
           var className = imageData.classes.split(",")[i];
@@ -71,7 +95,8 @@ var Slideshow = {
         img.classList.add("fadeIn");
       }
 
-      imageContainer.appendChild(img);
+      imageContainer.appendChild(innerContainer);
+      innerContainer.appendChild(img);
     }, imageData.delay);
 
   },
@@ -95,7 +120,7 @@ var Slideshow = {
       var localCurrentText = currentText;
       var textNode = document.createElement("SPAN");
       textContainerNode.appendChild(textNode);
-
+      textNode.classList.add("animated");
       for (var i = 0; i < localCurrentText.classes.split(",").length; i++) {
         var className = localCurrentText.classes.split(",")[i];
         textNode.classList.add(className);
@@ -151,7 +176,7 @@ var Slideshow = {
 
       }
       count++;
-    }, 100);
+    }, speed);
   }
 }
   Slideshow.init();
